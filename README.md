@@ -1,8 +1,12 @@
-"# VisionXproject" 
-'''Reflection Removal using U-Net
+VisionXproject
+
+Reflection Removal using U-Net
+
+TEAM Qual-230388
 
 
 #Overview
+
 This project is a solution for TECHFEST 2024-25 - Qualcomm VisionX Hackathon 
 
 The objective is to create an AI model that removes reflections from photos taken through reflective surfaces, preserving the original scene and details.
