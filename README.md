@@ -1,64 +1,72 @@
-VisionXproject
-Reflection Removal using U-Net
+# Reflection Removal Model 🪞➡️🖼  
 
-TEAM Qual-230388
-TEAM NAME-weshowspeed
+## Overview  
+This project implements a **deep learning model** for **reflection removal from images**. Developed during **VisionX Hackathon (Qualcomm)**, our model enhances image quality by eliminating unwanted reflections using a **Convolutional Neural Network (CNN)**.  
 
-This project is for TECHFEST 2024-25 - Qualcomm VisionX Hackathon 
+## Features  
+✔ **Removes reflections** from glass-covered images.  
+✔ **Deep learning-based** approach using **TensorFlow/Keras**.  
+✔ **Custom dataset handling** for training and evaluation.  
+✔ **Automated preprocessing** with image augmentation.  
+✔ **Model checkpointing** for optimized training.  
+✔ **Evaluation & visualization** of results.  
 
-The objective is to create an AI model that removes reflections from photos taken through reflective surfaces, preserving the original scene and details.
+## Technologies Used  
+- **Python**  
+- **TensorFlow / Keras**  
+- **OpenCV**  
+- **NumPy & Matplotlib**  
+- **PIL (Pillow)**  
 
+## Dataset  
+The dataset consists of:  
+📂 **With Reflection** – Images containing reflections.  
+📂 **Without Reflection** – Ground truth images (reflection-free).  
+📂 **Test Cases** – Unseen images for evaluation.  
 
- # No Reflections AI
+## Installation & Setup  
+### Prerequisites  
+Ensure you have Python **3.7+** installed along with the required dependencies.  
 
-## Project Overview
+### Install Dependencies  
+```bash
+pip install -r requirements.txt
+```  
 
-**No Reflections AI** is an advanced AI model designed to automatically detect and remove reflections from images taken through reflective surfaces such as glass windows or water. The goal is to enhance the clarity of the scene behind the reflection without introducing any unwanted effects.
+### Running the Model  
+1. **Prepare your dataset**: Ensure you have folders for images with and without reflections.  
+2. **Train the model**:  
+   ```bash
+   python train.py
+   ```  
+3. **Test the model** on new images:  
+   ```bash
+   python test.py --input test_images --output results/
+   ```  
+4. **Visualize results**: The script generates side-by-side comparisons of input vs. output.  
 
-## Team Introduction
+## Model Architecture  
+The model follows a **U-Net inspired CNN architecture**, consisting of:  
+- **Convolutional layers** for feature extraction.  
+- **Downsampling & Upsampling** to reconstruct reflection-free images.  
+- **Skip connections** to retain important features.  
+- **Activation: ReLU & Sigmoid** for precise pixel-wise predictions.  
 
-Shaman Shetty
-Krishna Shetty
-Aryan Tiwari
-Dishank Vyas
+## Evaluation Metrics  
+📊 The model is evaluated using:  
+- **PSNR (Peak Signal-to-Noise Ratio)**  
+- **SSIM (Structural Similarity Index)**  
+- **MSE (Mean Squared Error)**  
 
-## Project Description
+## Contributions  
+🚀 Contributions are welcome! If you have suggestions, improvements, or bug fixes, feel free to:  
+1. **Fork the repository**  
+2. **Create a new branch**  
+3. **Submit a Pull Request**  
 
-The primary objective of **No Reflections AI** is to develop a robust AI model that can:
-- Detect and remove reflections from images.
-- Perform well under various lighting conditions and with different types of reflections.
-- Enhance the quality of images for real-life applications such as improving security camera footage, enhancing personal photos, and aiding autonomous vehicles in seeing through windows or water.
+---
 
-## Dataset
+🔬 **Developed for VisionX Hackathon by Qualcomm**  
+💡 **Team Name:** *Your Team Name Here*  
 
-The dataset is structured as follows:
-
-'''reflection/
-│
-├── train/
-│   ├── images/
-│   │   ├── img1.jpg
-│   │   ├── img2.jpg
-│   │   └── ...
-│   └── labels/
-│       ├── img1.jpg
-│       ├── img2.jpg
-│       └── ...
-├── val/
-│   ├── images/
-│   │   ├── img1.jpg
-│   │   ├── img2.jpg
-│   │   └── ...
-│   └── labels/
-│       ├── img1.jpg
-│       ├── img2.jpg
-│       └── ...
-└── test/
-    ├── images/
-    │   ├── img1.jpg
-    │   ├── img2.jpg
-    │   └── ...
-    └── labels/
-        ├── img1.jpg
-        ├── img2.jpg
-        └── ...
+🚀 **Removing Reflections, Enhancing Reality!**
